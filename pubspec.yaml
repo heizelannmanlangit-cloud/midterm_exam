@@ -81,6 +81,11 @@ flutter:
     - family: Stagnan
       fonts:
         - asset: assets/fonts/stagnan-bold.otf
+          weight: 500
+        - asset: assets/fonts/stagnan-medium.otf
+          weight: 600 
+        - asset: assets/fonts/stagnan-regular.otf
+          weight: 800
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

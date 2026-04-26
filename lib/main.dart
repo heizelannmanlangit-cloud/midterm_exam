@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
                   Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 280),
                   child:  Text("\$17.00", 
                   style: TextStyle(
+                  fontFamily: 'Stagnan',
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
                   ),
@@ -53,6 +54,7 @@ class MyApp extends StatelessWidget {
                   Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 40),
                   child:  Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu mauris, scelerisque eu mauris id, pretium pulvinar sapien.", 
                   style: TextStyle(
+                  fontFamily: 'Stagnan',
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
                   ),
@@ -66,8 +68,9 @@ class MyApp extends StatelessWidget {
                   Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 10),
                   child:  Text("Variations", 
                   style: TextStyle(
+                  fontFamily: 'Stagnan',
                   fontSize: 30,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w800,
                   ),
                   ),
                   ),
@@ -82,6 +85,8 @@ class MyApp extends StatelessWidget {
                     child: Center(
                       child:  Text("Pink", 
                       style: TextStyle(
+                      fontFamily: 'Stagnan',  
+                      fontWeight: FontWeight.w500,  
                       fontSize: 15),
                   ),
                   ),
@@ -99,6 +104,8 @@ class MyApp extends StatelessWidget {
                     child: Center(
                       child:  Text("M", 
                       style: TextStyle(
+                      fontFamily: 'Stagnan',  
+                      fontWeight: FontWeight.w500,  
                       fontSize: 15),
                   ),
                   ),
@@ -143,8 +150,9 @@ class MyApp extends StatelessWidget {
                   Padding(padding: EdgeInsets.only(left: 20, right: 10),
                   child:  Text("Specifications", 
                   style: TextStyle(
+                  fontFamily: 'Stagnan',  
                   fontSize: 30,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w800,
                   ),
                   ),
                   ),
@@ -158,8 +166,9 @@ class MyApp extends StatelessWidget {
                   Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 10),
                   child:  Text("Material", 
                   style: TextStyle(
+                  fontFamily: 'Stagnan',  
                   fontSize: 20,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w800,
                   ),
                   ),
                   ),
@@ -181,6 +190,8 @@ class MyApp extends StatelessWidget {
                     child: Center(
                       child:  Text("Cotton 95%", 
                       style: TextStyle(
+                      fontFamily: 'Stagnan',
+                      fontWeight: FontWeight.w500,
                       fontSize: 15),
                   ),
                   ),
@@ -198,6 +209,8 @@ class MyApp extends StatelessWidget {
                     child: Center(
                       child:  Text("Nylon 5%", 
                       style: TextStyle(
+                      fontFamily: 'Stagnan',
+                      fontWeight: FontWeight.w500,  
                       fontSize: 15),
                   ),
                   ),
@@ -213,8 +226,9 @@ class MyApp extends StatelessWidget {
                   Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 10),
                   child:  Text("Origin", 
                   style: TextStyle(
+                  fontFamily: 'Stagnan',
+                  fontWeight: FontWeight.w800,  
                   fontSize: 20,
-                  fontWeight: FontWeight.bold,
                   ),
                   ),
                   ),
@@ -236,6 +250,8 @@ class MyApp extends StatelessWidget {
                     child: Center(
                       child:  Text("EU", 
                       style: TextStyle(
+                      fontFamily: 'Stagnan',
+                      fontWeight: FontWeight.w500,  
                       fontSize: 15),
                   ),
                   ),
@@ -250,8 +266,9 @@ class MyApp extends StatelessWidget {
                   Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 10),
                   child:  Text("Size guide", 
                   style: TextStyle(
+                  fontFamily: 'Stagnan',
+                  fontWeight: FontWeight.w800,  
                   fontSize: 20,
-                  fontWeight: FontWeight.bold,
                   ),
                   ),
                   ),
@@ -277,8 +294,9 @@ class MyApp extends StatelessWidget {
                   Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 10),
                   child:  Text("Delivery", 
                   style: TextStyle(
+                  fontFamily: 'Stagnan',
+                  fontWeight: FontWeight.w800,  
                   fontSize: 30,
-                  fontWeight: FontWeight.bold,
                   ),
                   ),
                   ),
@@ -299,7 +317,8 @@ class MyApp extends StatelessWidget {
                     
                     child: Row(
                       children: [
-                        Text("Standard", style: TextStyle(fontSize: 25)),
+                        Text("Standard", style: TextStyle( fontFamily: 'Stagnan',
+                      fontWeight: FontWeight.w500, fontSize: 25)),
 
                         SizedBox(width: 10),
 
@@ -313,6 +332,8 @@ class MyApp extends StatelessWidget {
                         child: Center(
                           child:  Text("5-7 days", 
                           style: TextStyle(
+                          fontFamily: 'Stagnan',
+                          fontWeight: FontWeight.w500,
                           color:  Color.fromARGB(255, 44, 122, 238),  
                           fontSize: 15),
                         ),
@@ -325,8 +346,9 @@ class MyApp extends StatelessWidget {
                           "\$3.00",
 
                           style: TextStyle(
+                            fontFamily: 'Stagnan',
+                            fontWeight: FontWeight.w800,
                             fontSize: 30,
-                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ],
@@ -352,7 +374,8 @@ class MyApp extends StatelessWidget {
                     
                     child: Row(
                       children: [
-                        Text("Express", style: TextStyle(fontSize: 25)),
+                        Text("Express", style: TextStyle(fontFamily: 'Stagnan',
+                      fontWeight: FontWeight.w500, fontSize: 25)),
 
                         SizedBox(width: 10),
 
@@ -366,6 +389,8 @@ class MyApp extends StatelessWidget {
                         child: Center(
                           child:  Text("1-2 days", 
                           style: TextStyle(
+                          fontFamily: 'Stagnan',
+                        fontWeight: FontWeight.w500,  
                           color:  Color.fromARGB(255, 44, 122, 238),  
                           fontSize: 15),
                         ),
@@ -378,8 +403,9 @@ class MyApp extends StatelessWidget {
                           "\$12.00",
 
                           style: TextStyle(
+                            fontFamily: 'Stagnan',
+                            fontWeight: FontWeight.w800, 
                             fontSize: 30,
-                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ],
@@ -394,7 +420,8 @@ class MyApp extends StatelessWidget {
               Row(
                 children: [
                   Padding(padding: EdgeInsets.only(left: 10)),
-                  Text("Ratings & Reviews", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),)
+                  Text("Ratings & Reviews", style: TextStyle(fontSize: 30, fontFamily: 'Stagnan',
+                      fontWeight: FontWeight.w800,),)
                 ],
               ),
 
@@ -442,7 +469,8 @@ class MyApp extends StatelessWidget {
 
                   SizedBox(width: 10),
 
-                  Text("Repo")
+
+                  
 
 
                 ],
