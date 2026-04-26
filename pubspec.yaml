@@ -80,6 +80,8 @@ flutter:
   fonts:
     - family: Stagnan
       fonts:
+        - asset: assets/fonts/stagnan-thin.otf
+          weight: 300
         - asset: assets/fonts/stagnan-bold.otf
           weight: 500
         - asset: assets/fonts/stagnan-medium.otf
