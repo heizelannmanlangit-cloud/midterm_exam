@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
                 ],
               ),
 
-              SizedBox(height: 10,),
+              SizedBox(height: 10),
 
                   Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 40),
                   child:  Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu mauris, scelerisque eu mauris id, pretium pulvinar sapien.", 
@@ -435,6 +435,27 @@ class MyApp extends StatelessWidget {
                   Icon(Icons.star, size: 50, color: const Color.fromARGB(255, 252, 197, 18),),
                   Icon(Icons.star, size: 50, color: const Color.fromARGB(255, 252, 197, 18),),
                   Icon(Icons.star_border, size: 50, color: Color.fromARGB(255, 252, 197, 18),),
+                  
+                  SizedBox(width: 10),
+                      
+                  Container(
+                          height: 35,
+                          width: 70,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                              color: Color.fromARGB(255, 221, 231, 252),
+                            ),
+                        child: Center(
+                          child:  Text("4/5", 
+                          style: TextStyle(
+                          fontFamily: 'Stagnan',
+                          fontWeight: FontWeight.w800,
+                          fontSize: 30),
+                        ),
+                        ),
+                        ),
+
+
                 ],
               ),
 
@@ -461,7 +482,7 @@ class MyApp extends StatelessWidget {
                         color: Colors.white, 
                       ),
                       child: CircleAvatar(
-                        radius: 40,
+                        radius: 30,
                         backgroundImage: AssetImage('assets/Veronika_pfp.jpg'),
                       ),
                     ),
@@ -469,21 +490,78 @@ class MyApp extends StatelessWidget {
 
                   SizedBox(width: 10),
 
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(padding: EdgeInsetsGeometry.only(left: 10), 
+                    child: Text("Veronika",
+                    style: TextStyle(
+                      fontFamily: 'Stagnan',
+                      fontWeight: FontWeight.w500,
+                      fontSize: 25,
+                    ),
+                    ),
+                    ),
+                    buildStarRow(),
 
-                  
+                  SizedBox(height: 10),
 
-
+                    Padding(padding: EdgeInsetsGeometry.only(left: 10, right: 10), 
+                    child: Text("Lorem ipsum dolor sit amet, consetetur sadipscing\nelitr, sed diam nonumy eirmod tempor invidunt ut\nlabore et dolore magna aliquyam erat, sed ...",
+                    style: TextStyle(
+                      fontFamily: 'Stagnan',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 15,
+                    ),
+                    ),
+                    ),
+                  ],
+                ),
                 ],
               ),
 
+              SizedBox(height: 10),
 
+              Container(
+                    width: 450,
+                    height: 60,
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                    decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 0, 76, 255),
+                    borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Center(
+                       child: Text("View All Reviews", 
+                       style: TextStyle(
+                        fontFamily: 'Stagnan', 
+                        fontSize: 20, 
+                        color: Colors.white, 
+                        fontWeight: FontWeight.w300),
+                        ),
+                    ), 
+                   
+                  ),
+
+              SizedBox(height:100)
 
             ],
           ),
         ),
       ),
       ),
-    );    
+    );
    }
 
+   Widget buildStarRow() {
+  return Row(
+    children: [
+      Padding(padding: EdgeInsets.only(left: 10)),
+      Icon(Icons.star, size: 30, color: Color.fromARGB(255, 252, 197, 18)),
+      Icon(Icons.star, size: 30, color: Color.fromARGB(255, 252, 197, 18)),
+      Icon(Icons.star, size: 30, color: Color.fromARGB(255, 252, 197, 18)),
+      Icon(Icons.star, size: 30, color: Color.fromARGB(255, 252, 197, 18)),
+      Icon(Icons.star_border, size: 30, color: Color.fromARGB(255, 252, 197, 18)),
+    ],
+  );
+}
 }
