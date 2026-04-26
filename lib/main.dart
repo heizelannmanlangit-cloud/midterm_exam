@@ -1,0 +1,461 @@
+import 'dart:collection';
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override 
+   Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        body: SafeArea(
+          child: SingleChildScrollView(
+          child: Column(
+
+            children: [
+
+              Image.asset('assets/image(1)_spelec.jpg'),
+
+              SizedBox(height: 10,),
+
+              Row(
+                children: [
+                  Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 280),
+                  child:  Text("\$17.00", 
+                  style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  ),
+                  ),
+                  ),
+
+                  Container(
+                    width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 255, 235, 235),
+                          shape: BoxShape.circle,
+                        ),
+                        child: Icon(Icons.arrow_forward, color: Color.fromARGB(255, 181, 162, 162), size: 28),
+                  ),
+                ],
+              ),
+
+              SizedBox(height: 10,),
+
+                  Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 40),
+                  child:  Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu mauris, scelerisque eu mauris id, pretium pulvinar sapien.", 
+                  style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                  ),
+                  ),
+                  ),
+
+               SizedBox(height: 20),
+
+              Row(
+                children: [
+                  Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 10),
+                  child:  Text("Variations", 
+                  style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  ),
+                  ),
+                  ),
+
+                  Container(
+                    height: 30,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: Color.fromARGB(255, 243, 240, 240),
+                    ),
+                    child: Center(
+                      child:  Text("Pink", 
+                      style: TextStyle(
+                      fontSize: 15),
+                  ),
+                  ),
+                  ),
+
+                  SizedBox(width: 10),
+
+                  Container(
+                    height: 30,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: Color.fromARGB(255, 243, 240, 240),
+                    ),
+                    child: Center(
+                      child:  Text("M", 
+                      style: TextStyle(
+                      fontSize: 15),
+                  ),
+                  ),
+                  ),
+
+                  SizedBox(width: 125),
+
+                  Container(
+                    width: 40,
+                    height: 40,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 0, 76, 255),
+                        shape: BoxShape.circle,
+                        ),
+                        child: Icon(Icons.arrow_forward, color: Colors.white, size: 28),
+                  ),
+                ],
+              ),
+
+              SizedBox(height: 10),
+
+              Row(
+                children: [
+                  Padding(padding: EdgeInsetsGeometry.only(left: 20),
+                  ),
+                  Image.asset("Placeholder_01.jpg"),
+                  SizedBox(width: 5),
+
+                  Image.asset("Placeholder_02.jpg"),
+                  SizedBox(width: 5),
+
+                  Image.asset("Placeholder_03.jpg"),
+                  SizedBox(width: 5), 
+
+                ],
+              ),
+
+              SizedBox(height: 10),
+
+              Row(
+                children: [
+                  Padding(padding: EdgeInsets.only(left: 20, right: 10),
+                  child:  Text("Specifications", 
+                  style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  ),
+                  ),
+                  ),
+                ],
+              ),  
+
+              SizedBox(height: 10),
+
+                Row(
+                children: [
+                  Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 10),
+                  child:  Text("Material", 
+                  style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  ),
+                  ),
+                  ),
+                ],
+              ), 
+              
+              SizedBox(height: 5),
+
+              Row(
+                children: [
+                  Padding(padding: EdgeInsetsGeometry.only(left: 10, right: 10)),
+                  Container(
+                    height: 30,
+                    width: 90,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: Color.fromARGB(255, 233, 204, 204),
+                    ),
+                    child: Center(
+                      child:  Text("Cotton 95%", 
+                      style: TextStyle(
+                      fontSize: 15),
+                  ),
+                  ),
+                  ),
+
+                  SizedBox(width: 5),
+
+                  Container(
+                    height: 30,
+                    width: 90,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: Color.fromARGB(255, 233, 204, 204),
+                    ),
+                    child: Center(
+                      child:  Text("Nylon 5%", 
+                      style: TextStyle(
+                      fontSize: 15),
+                  ),
+                  ),
+                  ),
+
+                ],
+              ),
+
+              SizedBox(height: 15),
+
+                Row(
+                children: [
+                  Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 10),
+                  child:  Text("Origin", 
+                  style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  ),
+                  ),
+                  ),
+                ],
+              ), 
+              
+              SizedBox(height: 5),
+
+              Row(
+                children: [
+                  Padding(padding: EdgeInsetsGeometry.only(left: 10, right: 10)),
+                  Container(
+                    height: 30,
+                    width: 90,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: Color.fromARGB(255, 209, 221, 247),
+                    ),
+                    child: Center(
+                      child:  Text("EU", 
+                      style: TextStyle(
+                      fontSize: 15),
+                  ),
+                  ),
+                  ),
+                ],
+              ),
+
+              SizedBox(height: 15),
+
+              Row(
+                children: [
+                  Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 10),
+                  child:  Text("Size guide", 
+                  style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  ),
+                  ),
+                  ),
+
+                  SizedBox(width: 300),
+
+                Container(
+                    width: 40,
+                    height: 40,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 0, 76, 255),
+                        shape: BoxShape.circle,
+                        ),
+                        child: Icon(Icons.arrow_forward, color: Colors.white, size: 28),
+                  ),
+                ],
+              ), 
+              
+              SizedBox(height: 10),
+
+              Row(
+                children: [
+                  Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 10),
+                  child:  Text("Delivery", 
+                  style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  ),
+                  ),
+                  ),
+                ],
+              ),    
+
+              Row(
+                children: [
+                  Padding(padding: EdgeInsetsGeometry.only(left: 10, right: 10),
+                  child: Container(
+                    width: 480,
+                    height: 70,
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                    decoration: BoxDecoration(
+                    border: Border.all(color: Color.fromARGB(255, 0, 76, 255), width: 2),
+                    borderRadius: BorderRadius.circular(16),
+                    ),
+                    
+                    child: Row(
+                      children: [
+                        Text("Standard", style: TextStyle(fontSize: 25)),
+
+                        SizedBox(width: 10),
+
+                        Container(
+                          height: 40,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(3),
+                              color: Color.fromARGB(255, 221, 231, 252),
+                            ),
+                        child: Center(
+                          child:  Text("5-7 days", 
+                          style: TextStyle(
+                          color:  Color.fromARGB(255, 44, 122, 238),  
+                          fontSize: 15),
+                        ),
+                        ),
+                        ),
+
+                        SizedBox(width: 150,),
+
+                        Text(
+                          "\$3.00",
+
+                          style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  ),
+                ],
+              ),
+
+              SizedBox(height: 5),
+
+              Row(
+                children: [
+                  Padding(padding: EdgeInsetsGeometry.only(left: 10, right: 10),
+                  child: Container(
+                    width: 480,
+                    height: 70,
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                    decoration: BoxDecoration(
+                    border: Border.all(color: Color.fromARGB(255, 0, 76, 255), width: 2),
+                    borderRadius: BorderRadius.circular(16),
+                    ),
+                    
+                    child: Row(
+                      children: [
+                        Text("Express", style: TextStyle(fontSize: 25)),
+
+                        SizedBox(width: 10),
+
+                        Container(
+                          height: 40,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(3),
+                              color: Color.fromARGB(255, 221, 231, 252),
+                            ),
+                        child: Center(
+                          child:  Text("1-2 days", 
+                          style: TextStyle(
+                          color:  Color.fromARGB(255, 44, 122, 238),  
+                          fontSize: 15),
+                        ),
+                        ),
+                        ),
+
+                        SizedBox(width: 150,),
+
+                        Text(
+                          "\$12.00",
+
+                          style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  ),
+                ],
+              ),
+
+              SizedBox(height: 20),
+
+              Row(
+                children: [
+                  Padding(padding: EdgeInsets.only(left: 10)),
+                  Text("Ratings & Reviews", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),)
+                ],
+              ),
+
+              SizedBox(height: 10),
+
+              Row(
+                children: [
+                  Padding(padding: EdgeInsetsGeometry.only(left: 10)),
+                  Icon(Icons.star, size: 50, color: const Color.fromARGB(255, 252, 197, 18),),
+                  Icon(Icons.star, size: 50, color: const Color.fromARGB(255, 252, 197, 18),),
+                  Icon(Icons.star, size: 50, color: const Color.fromARGB(255, 252, 197, 18),),
+                  Icon(Icons.star, size: 50, color: const Color.fromARGB(255, 252, 197, 18),),
+                  Icon(Icons.star_border, size: 50, color: Color.fromARGB(255, 252, 197, 18),),
+                ],
+              ),
+
+              SizedBox(height: 10),
+
+              Row(
+                children: [
+                  Padding(padding: EdgeInsetsGeometry.only(left: 10)),
+                  Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      boxShadow: [ 
+                        BoxShadow(
+                          color: Colors.black26,
+                          blurRadius: 10,
+                          offset: Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    child: Container(
+                      padding: EdgeInsets.all(10), 
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white, 
+                      ),
+                      child: CircleAvatar(
+                        radius: 40,
+                        backgroundImage: AssetImage('assets/Veronika_pfp.jpg'),
+                      ),
+                    ),
+                  ),
+
+                  SizedBox(width: 10),
+
+                  Text("Repo")
+
+
+                ],
+              ),
+
+
+
+            ],
+          ),
+        ),
+      ),
+      ),
+    );    
+   }
+
+}
