@@ -14,6 +14,80 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.white,
+        
+        bottomNavigationBar: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.08),
+                  blurRadius: 10,
+                  offset: Offset(0, -3),
+                    ),
+                  ],
+                ),
+            
+            child: Row(
+              children: [
+                Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Color(0xFFF2F2F2),
+                    borderRadius: BorderRadius.circular(14),
+                  ),
+                  child: Icon(Icons.favorite_border, color: Colors.black, size: 24),
+                ),
+                
+                SizedBox(width: 12),
+
+                Expanded(
+                  child: Container(
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF1C1C1E),
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: Center(
+                      child: Text("Add to cart",
+                        style: TextStyle(
+                          fontFamily: 'Stagnan',
+                          fontSize: 18,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                            ),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                SizedBox(width: 12),
+
+                Expanded(
+                  child: Container(
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 0, 76, 255),
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: Center(
+                      child: Text("Buy now",
+                        style: TextStyle(
+                          fontFamily: 'Stagnan',
+                          fontSize: 18,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                          ),
+                          ),
+                        ),
+                     ),
+                    ),
+                    ],
+                  ),
+                ),
+
+
         body: SafeArea(
           child: SingleChildScrollView(
           child: Column(
