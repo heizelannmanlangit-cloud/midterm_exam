@@ -541,16 +541,66 @@ class MyApp extends StatelessWidget {
                    
                   ),
 
-              SizedBox(height: 100),
+              SizedBox(height: 20),
 
               Row(
                 children: [
                   Padding(padding: EdgeInsetsGeometry.only(left: 10)),
-                  
-                ],
+                  Text("Most Popular", 
+                       style: TextStyle(
+                        fontFamily: 'Stagnan', 
+                        fontSize: 30, 
+                        fontWeight: FontWeight.w800),
+                  ),
 
+                  SizedBox(width: 150),
+
+                  Text("See All", 
+                       style: TextStyle(
+                        fontFamily: 'Stagnan', 
+                        fontSize: 20, 
+                        fontWeight: FontWeight.w800),
+                  ),
+
+                  SizedBox(width: 20),
+
+                  Container(
+                    width: 40,
+                    height: 40,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 0, 76, 255),
+                        shape: BoxShape.circle,
+                        ),
+                        child: Icon(Icons.arrow_forward, color: Colors.white, size: 28),
+                  ),
+
+                ],
               ),
+
+              SizedBox(height: 20),
               
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  spacing: 12, // Flutter 3.27+, otherwise use SizedBox(width: 12) between items
+                  children: [
+                    buildPopularCard('assets/mostP1.jpg','1780','New'),
+                    buildPopularCard('assets/mostP2.jpg','1780','Sale'),
+                    buildPopularCard('assets/mostP3.jpg', '1780','Hot'),
+                    ],
+                    ),
+                  ),
+
+              SizedBox(height: 30),
+
+              Row(children: [
+                Padding(padding: EdgeInsetsGeometry.only(left: 10),),
+                Text("You Might Like", style: TextStyle(fontFamily: 'Stagnan', fontSize: 30, fontWeight: FontWeight.w800),)
+              ],)
+
+              
+
+
 
             ],
           ),
@@ -572,4 +622,75 @@ class MyApp extends StatelessWidget {
     ],
   );
 }
+
+Widget buildPopularCard( String imagePath, String likeCount, String tag, ) {
+  return Container(
+    width: 160,
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(16),
+      border: Border.all(
+        color: const Color.fromARGB(255, 255, 255, 255),
+        width: 10,
+      ),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black.withOpacity(0.08),
+          blurRadius: 12,
+          offset: Offset(0, 4),
+        ),
+      ],
+    ),
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(16),
+            bottom: Radius.circular(16),
+          ),
+          child: Image.asset(
+            imagePath,
+            height: 180,
+            width: double.infinity,
+            fit: BoxFit.cover,
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+          child: Row(
+            children: [
+              Text(
+                likeCount,
+                style: TextStyle(
+                  fontFamily: 'Stagnan',
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              SizedBox(width: 4),
+              Icon(
+                Icons.favorite,
+                size: 18,
+                color: Color.fromARGB(255, 0, 76, 255),
+              ),
+              Spacer(),
+              Text(
+                tag,
+                style: TextStyle(
+                  fontFamily: 'Stagnan',
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+
+
 }
