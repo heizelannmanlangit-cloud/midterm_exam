@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
 
               Row(
                 children: [
-                  Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 280),
+                  Padding(padding: EdgeInsetsGeometry.only(left: 20, right: 300),
                   child:  Text("\$17.00", 
                   style: TextStyle(
                   fontFamily: 'Stagnan',
@@ -110,7 +110,7 @@ class MyApp extends StatelessWidget {
                   ),
                   ),
 
-                  SizedBox(width: 125),
+                  SizedBox(width: 150),
 
                   Container(
                     width: 40,
@@ -272,7 +272,7 @@ class MyApp extends StatelessWidget {
                   ),
                   ),
 
-                  SizedBox(width: 300),
+                  SizedBox(width: 320),
 
                 Container(
                     width: 40,
@@ -553,7 +553,7 @@ class MyApp extends StatelessWidget {
                         fontWeight: FontWeight.w800),
                   ),
 
-                  SizedBox(width: 150),
+                  SizedBox(width: 180),
 
                   Text("See All", 
                        style: TextStyle(
@@ -577,7 +577,7 @@ class MyApp extends StatelessWidget {
                 ],
               ),
 
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -596,11 +596,34 @@ class MyApp extends StatelessWidget {
               Row(children: [
                 Padding(padding: EdgeInsetsGeometry.only(left: 10),),
                 Text("You Might Like", style: TextStyle(fontFamily: 'Stagnan', fontSize: 30, fontWeight: FontWeight.w800),)
-              ],)
+              ],
+              ),
+
+              SizedBox(height: 20),
+
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    GridView.count(
+                    crossAxisCount: 2,        // 2 columns
+                    shrinkWrap: true,         // lets it sit inside a scroll view
+                    physics: NeverScrollableScrollPhysics(), // parent handles scrolling
+                    childAspectRatio: 0.75,    // adjust this to control card height
+                    children: [
+                      buildYmlCard('assets/yml1.jpg','Lorem ipsum dolor sit\namet consectetur','\$17.00'),
+                      buildYmlCard('assets/yml2.jpg', 'Lorem ipsum dolor sit\namet consectetur','\$17.00'),
+                      buildYmlCard('assets/yml3.jpg','Lorem ipsum dolor sit\namet consectetur','\$17.00'),
+                      buildYmlCard('assets/yml4.jpg','Lorem ipsum dolor sit\namet consectetur','\$17.00'),
+                      buildYmlCard('assets/yml5.jpg','Lorem ipsum dolor sit\namet consectetur','\$17.00'),
+                      buildYmlCard('assets/yml6.jpg','Lorem ipsum dolor sit\namet consectetur','\$17.00'),
+                      ],
+                    ),
+                    ],
+                  ),
+
 
               
-
-
+            
 
             ],
           ),
@@ -623,39 +646,39 @@ class MyApp extends StatelessWidget {
   );
 }
 
-Widget buildPopularCard( String imagePath, String likeCount, String tag, ) {
-  return Container(
-    width: 160,
-    decoration: BoxDecoration(
-      color: Colors.white,
-      borderRadius: BorderRadius.circular(16),
-      border: Border.all(
-        color: const Color.fromARGB(255, 255, 255, 255),
-        width: 10,
-      ),
-      boxShadow: [
-        BoxShadow(
-          color: Colors.black.withOpacity(0.08),
-          blurRadius: 12,
-          offset: Offset(0, 4),
-        ),
-      ],
-    ),
-    child: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.vertical(
-            top: Radius.circular(16),
-            bottom: Radius.circular(16),
+  Widget buildPopularCard( String imagePath, String likeCount, String tag, ) {
+      return Container(
+        width: 160,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(
+            color: const Color.fromARGB(255, 255, 255, 255),
+            width: 10,
           ),
-          child: Image.asset(
-            imagePath,
-            height: 180,
-            width: double.infinity,
-            fit: BoxFit.cover,
-          ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.08),
+              blurRadius: 12,
+              offset: Offset(0, 4),
+            ),
+          ],
         ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(16),
+                bottom: Radius.circular(16),
+                ),
+              child: Image.asset(
+                imagePath,
+                height: 180,
+                width: double.infinity,
+                fit: BoxFit.cover,
+                ),
+                ),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
           child: Row(
@@ -681,16 +704,83 @@ Widget buildPopularCard( String imagePath, String likeCount, String tag, ) {
                   fontFamily: 'Stagnan',
                   fontSize: 15,
                   fontWeight: FontWeight.w500,
-                ),
+                  ),
+                  ),
+                ],
               ),
-            ],
-          ),
+           ),
+          ],
         ),
-      ],
-    ),
   );
 }
 
+  Widget buildYmlCard(String imagePath,String title,String price,) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 220,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(
+                color: const Color.fromARGB(255, 255, 255, 255),
+                width: 5,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.10),
+                  blurRadius: 12,
+                  offset: Offset(0, 4),
+                ),
+              ],
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(16),
+                    bottom: Radius.circular(16),
+                  ),
+                  child: Image.asset(
+                    imagePath,
+                    height: 225,
+                    width: double.infinity,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontFamily: 'Stagnan',
+                    fontSize: 20,
+                  ),
+                ),
+                Text(
+                  price,
+                  style: TextStyle(
+                    fontFamily: 'Stagnan',
+                    fontSize: 30,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+}
+
+  
 
 
 }
