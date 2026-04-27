@@ -67,6 +67,12 @@ flutter:
     - assets/Placeholder_02.jpg
     - assets/Placeholder_03.jpg
     - assets/Veronika_pfp.jpg
+    - assets/yml1.jpg
+    - assets/yml2.jpg
+    - assets/yml3.jpg
+    - assets/yml4.jpg
+    - assets/yml5.jpg
+    - assets/yml6.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
